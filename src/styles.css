@@ -1,1 +1,24 @@
 /* You can add global styles to this file, and also import other style files */
+.main-content {
+  flex: 1;
+  margin-left: 280px;
+  margin-top: 64px;
+  margin-bottom: 60px; /* Add this to create space for footer */
+  padding: 2rem;
+  background: #f9fafb;
+  min-height: calc(100vh - 124px);
+  transition: margin-left 0.3s ease;
+}
+
+.sidebar-collapsed .main-content {
+  margin-left: 72px;
+}
+
+@media (max-width: 768px) {
+  .main-content {
+    margin-left: 0;
+    margin-bottom: 60px; /* Ensure footer space on mobile too */
+    padding: 1rem;
+    min-height: calc(100vh - 124px);
+  }
+}
